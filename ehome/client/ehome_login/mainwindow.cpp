@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
         qDebug("udp_read error!");
     }
 
+    //显示版本号
     ui->swVersionLabel->setText(QString(QLatin1String((char*)v_info.s_version)));
     ui->hwVersionLabel->setText(QString(QLatin1String((char*)v_info.h_version)));
 }
@@ -28,4 +29,31 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_getTempBtn_clicked()
+{
+    int ret;
+    int cmd = GET_TEMPERATURE;
+    float temperature;
+
+    ret=udp_write(CLIENT,(char *)&cmd,sizeof(int));
+    if(ret==-1)
+    {
+        qDebug("udp_write");
+        return;
+    }
+
+    //读取温度值
+    ret = udp_read(CLIENT,(char*)&temperature,sizeof(float));
+    if(ret == -1)
+    {
+        qDebug("udp_read error!");
+    }
+
+    //显示温度值
+    ui->temperatureTB->setText(QString(QLatin1String((char*)&temperature)));
+
+
+
 }

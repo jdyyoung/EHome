@@ -16,12 +16,19 @@
 
 
 //系统信息显示
-#define GET_VERSIONS    3000
-#define GET_MEMINFO     3001
-#define GET_CPUINFO     3002
-#define GET_DISKINFO    3003
+#define GET_VERSIONS      3000
+//#define GET_MEMINFO     3001
+//#define GET_CPUINFO     3002
+//#define GET_DISKINFO    3003
+#define GET_HRADWARE_INFO 3001
+
+//版本升级
+#define VERSIONS_UPDATE   4000
+
+//获取温度
+#define GET_TEMPERATURE   5000
 
 //返回错误消息
-#define RERURN_ERROR    -1
+#define RETURN_ERROR    -1
 
 #endif

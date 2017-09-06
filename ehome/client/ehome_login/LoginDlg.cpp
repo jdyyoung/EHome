@@ -78,7 +78,7 @@ void LoginDlg::on_connect_btn_clicked()
 
     //读取返回的登录结果
     int result = 0;
-    ret = udp_read(CLIENT,(char*)&result,sizeof(char));
+    ret = udp_read(CLIENT,(char*)&result,sizeof(int));
     if(ret == -1)
     {
         qDebug("udp_read error!");

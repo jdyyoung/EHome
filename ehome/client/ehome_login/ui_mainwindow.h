@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sun Sep 3 16:10:49 2017
+** Created: Wed Sep 6 23:03:35 2017
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -117,6 +117,9 @@ public:
 
         horizontalLayout_4->addWidget(temperatureTB);
 
+        getTempBtn->raise();
+        label_3->raise();
+        temperatureTB->raise();
         layoutWidget1 = new QWidget(tab);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
         layoutWidget1->setGeometry(QRect(30, 40, 279, 30));
@@ -272,7 +275,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -90,6 +90,9 @@
         </widget>
        </item>
       </layout>
+      <zorder>getTempBtn</zorder>
+      <zorder>label_3</zorder>
+      <zorder>temperatureTB</zorder>
      </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">

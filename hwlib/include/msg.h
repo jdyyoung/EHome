@@ -25,6 +25,9 @@
 //版本升级
 #define VERSIONS_UPDATE   4000
 
+//获取温度
+#define GET_TEMPERATURE   5000
+
 //返回错误消息
 #define RETURN_ERROR    -1
 
