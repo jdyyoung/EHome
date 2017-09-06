@@ -1,0 +1,31 @@
+LIBTARGET=libserial.so
+READAPPTARGET=seriallib_test_read
+WRITEAPPTARGET=seriallib_test_write
+#ZIGBEEAPPTARGET=seriallib_test_zigbee
+
+LIBOBJ=serial.o
+READAPPOBJ=seriallib_test_read.o
+WRITEAPPOBJ=seriallib_test_write.o
+#ZIGBEEAPPOBJ=seriallib_test_zigbee
+
+CC=arm-linux-gcc
+CP=cp
+CFLAGS=-shared -fpic  
+LDFLAGS=-L. -lserial
+
+LIBINSTALLPATH=/opt/rootfs/home/applib
+APPINSTALLPATH=/opt/rootfs/home/apptest/
+
+all: $(LIBTARGET) $(READAPPTARGET) $(WRITEAPPTARGET)
+
+$(LIBTARGET) : $(LIBOBJ) 
+	$(CC) $(CFLAGS) -o $(LIBTARGET) $(LIBOBJ) 
+	$(CP) $(LIBTARGET) $(LIBINSTALLPATH)
+$(READAPPTARGET) : $(READAPPOBJ)
+	$(CC) -o $(READAPPTARGET) $(READAPPOBJ) $(LDFLAGS)
+	$(CP) $(READAPPTARGET) $(APPINSTALLPATH)
+$(WRITEAPPTARGET) : $(WRITEAPPOBJ)
+	$(CC) -o $(WRITEAPPTARGET) $(WRITEAPPOBJ) $(LDFLAGS)
+	$(CP) $(WRITEAPPTARGET) $(APPINSTALLPATH)
+clean:
+	rm $(WRITEAPPTARGET) $(READAPPTARGET) $(LIBTARGET) $(READAPPOBJ)  $(WRITEAPPOBJ)$(LIBOBJ)
