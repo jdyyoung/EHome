@@ -215,8 +215,8 @@ int get_temperature(void)
     {
         return ERROR;
     }
-    pr_debug("current temperature is %.3f\n", ds18b20ctrl.temperature);
     ds18b20_close(fd);
+    pr_debug("current temperature is %.3f\n", ds18b20ctrl.temperature);
     result = SUCCESS;
     udp_write(SERVER,(char*)&ds18b20ctrl.temperature,sizeof(float));
     //再传送温度值

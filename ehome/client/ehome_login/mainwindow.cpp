@@ -36,7 +36,11 @@ void MainWindow::on_getTempBtn_clicked()
     int ret;
     int cmd = GET_TEMPERATURE;
     float temperature;
-
+    ret=udp_init(CLIENT,ip_addr,8888);
+    if(ret == -1)
+    {
+        qDebug("init socket error!");
+    }
     ret=udp_write(CLIENT,(char *)&cmd,sizeof(int));
     if(ret==-1)
     {
@@ -50,10 +54,8 @@ void MainWindow::on_getTempBtn_clicked()
     {
         qDebug("udp_read error!");
     }
-
+    qDebug("now temperature=%f",temperature);
     //显示温度值
-    ui->temperatureTB->setText(QString(QLatin1String((char*)&temperature)));
-
-
+    ui->temperatureTB->setText( QString("%1 \260C").arg(temperature));
 
 }
