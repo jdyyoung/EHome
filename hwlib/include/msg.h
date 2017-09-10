@@ -16,14 +16,15 @@
 
 
 //系统信息显示
-#define GET_VERSIONS      3000
 //#define GET_MEMINFO     3001
 //#define GET_CPUINFO     3002
 //#define GET_DISKINFO    3003
-#define GET_HRADWARE_INFO 3001
+#define GET_HARDWARE_INFO 3000
 
-//版本升级
-#define VERSIONS_UPDATE   4000
+//升级
+#define USERDATA_UPDATE   4000
+#define KERNEL_UPDATE     4001
+#define ROOTFS_UPDATE     4002
 
 //获取温度
 #define GET_TEMPERATURE   5000

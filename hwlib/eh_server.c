@@ -42,6 +42,9 @@ void recvcmd(void)
             ERR("udp_read!");
         }
         pr_debug("read cmd success\n");
+        pr_debug("cmd=%d\n",cmd);
+        ret=GET_HARDWARE_INFO;
+        pr_debug("GET_HARDWARE_INFO=%d\n",ret);
         switch(cmd)
         {
             case LOGIN_EHOME:
@@ -75,7 +78,8 @@ void recvcmd(void)
                 {
                     pr_debug("get tempature faild!\n");
                 }
-            case GET_HARDWARE_INFO:
+                break;
+           case GET_HARDWARE_INFO:
                 ret=get_hardware_infomation();
                 if(ret == ERROR)
                 {
@@ -86,7 +90,7 @@ void recvcmd(void)
                 ret=kernel_update();
                 if(ret == ERROR)
                 {
-                    pr_debug("get hardware infomation failed!\n");
+                    pr_debug("kernel_update failed!\n");
                 }
                 break;
             case USERDATA_UPDATE:
@@ -102,7 +106,7 @@ void recvcmd(void)
                 {
                     pr_debug("userdata_update failed!\n");
                 }
-
+                break;
             default:
                 LOG("cmd is not defined!\n");
                 break;

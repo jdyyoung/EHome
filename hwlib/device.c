@@ -295,7 +295,7 @@ void get_cpu_freq(int* cpufreq)
 
 }
 
-/*获取当前生育内存*/
+/*获取当前剩余内存*/
 void get_freemem_space(int *freemem)
 {
     char* file = "/proc/meminfo";
@@ -332,11 +332,12 @@ int get_hardware_infomation()
         int free_disk;
     }hw_info;
 
-    get_cpu_freq(&hw_info.cpu_freq);
-    get_freemem_space(&hw_info.free_mem);
-    get_freedisk_space(&hw_info.free_disk);
+    get_cpu_freq(&(hw_info.cpu_freq));
+    get_freemem_space(&(hw_info.free_mem));
+    get_freedisk_space(&(hw_info.free_disk));
+    pr_debug("cpu=%d,mem=%d,disk=%d\n",hw_info.cpu_freq,hw_info.free_mem,hw_info.free_disk);
     result = SUCCESS;
-    udp_write(SERVER,(char*)&result,sizeof(int));
+    //udp_write(SERVER,(char*)&result,sizeof(int));
     udp_write(SERVER,(char*)&hw_info,sizeof(struct hardware_info));
     return SUCCESS;
 }
@@ -344,10 +345,9 @@ int get_hardware_infomation()
 int kernel_update()
 {
     int result;
-    update_kernel("zImage");
-    result = SUCCESS;
+    result=update_kernel("/mnt/usb/zImage");
     udp_write(SERVER,(char*)&result,sizeof(int));
-    return SUCCESS;
+    return result;
 
 }
 int rootfs_update()

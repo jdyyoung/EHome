@@ -8,11 +8,12 @@ int main(int argc, char *argv[])
         }
 
         if (!strcmp(argv[1], "zImage")) 
-                update_kernel(argv[1]);
+                update_kernel(ZIMAGE_PATH);
+                //update_kernel("/mnt/usb/zImage");
         else if (!strcmp(argv[1], "rootfs"))
-                update_rootfs(argv[1]);
+                update_rootfs(ROOTFS_PATH);
         else if (!strcmp(argv[1], "userdata"))
-                update_userdata(argv[1]);
+                update_userdata(USERDATA_PATH);
 
         return 0;
 }
