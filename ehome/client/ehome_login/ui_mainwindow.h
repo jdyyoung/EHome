@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sat Sep 9 23:25:33 2017
+** Created: Mon Sep 11 22:41:15 2017
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -42,7 +42,7 @@ public:
     QLabel *label_2;
     QPushButton *LEDonBtn;
     QPushButton *LEDoffBtn;
-    QWidget *widget;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_3;
     QPushButton *getTempBtn;
@@ -50,19 +50,19 @@ public:
     QWidget *tab_2;
     QFrame *line;
     QFrame *line_2;
-    QWidget *layoutWidget1;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout;
     QLabel *label_6;
     QPushButton *kernelUpdateBtn;
     QPushButton *rootfsUpdateBtn;
     QPushButton *userdataUpdateBtn;
-    QWidget *layoutWidget2;
+    QWidget *layoutWidget3;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_4;
     QLabel *hwVersionLabel;
     QLabel *label_5;
     QLabel *swVersionLabel;
-    QWidget *widget1;
+    QWidget *layoutWidget4;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *systemInfoBtn;
     QLabel *label_7;
@@ -119,25 +119,25 @@ public:
 
         horizontalLayout_5->addWidget(LEDoffBtn);
 
-        widget = new QWidget(tab);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(30, 110, 414, 43));
-        horizontalLayout_4 = new QHBoxLayout(widget);
+        layoutWidget1 = new QWidget(tab);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(30, 110, 414, 43));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget1);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setMaximumSize(QSize(59, 18));
 
         horizontalLayout_4->addWidget(label_3);
 
-        getTempBtn = new QPushButton(widget);
+        getTempBtn = new QPushButton(layoutWidget1);
         getTempBtn->setObjectName(QString::fromUtf8("getTempBtn"));
         getTempBtn->setMaximumSize(QSize(85, 28));
 
         horizontalLayout_4->addWidget(getTempBtn);
 
-        temperatureTB = new QTextBrowser(widget);
+        temperatureTB = new QTextBrowser(layoutWidget1);
         temperatureTB->setObjectName(QString::fromUtf8("temperatureTB"));
         temperatureTB->setMaximumSize(QSize(256, 41));
 
@@ -156,100 +156,100 @@ public:
         line_2->setGeometry(QRect(10, 120, 650, 3));
         line_2->setFrameShape(QFrame::HLine);
         line_2->setFrameShadow(QFrame::Sunken);
-        layoutWidget1 = new QWidget(tab_2);
-        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(10, 80, 349, 29));
-        horizontalLayout = new QHBoxLayout(layoutWidget1);
+        layoutWidget2 = new QWidget(tab_2);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(10, 80, 349, 29));
+        horizontalLayout = new QHBoxLayout(layoutWidget2);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        label_6 = new QLabel(layoutWidget1);
+        label_6 = new QLabel(layoutWidget2);
         label_6->setObjectName(QString::fromUtf8("label_6"));
 
         horizontalLayout->addWidget(label_6);
 
-        kernelUpdateBtn = new QPushButton(layoutWidget1);
+        kernelUpdateBtn = new QPushButton(layoutWidget2);
         kernelUpdateBtn->setObjectName(QString::fromUtf8("kernelUpdateBtn"));
 
         horizontalLayout->addWidget(kernelUpdateBtn);
 
-        rootfsUpdateBtn = new QPushButton(layoutWidget1);
+        rootfsUpdateBtn = new QPushButton(layoutWidget2);
         rootfsUpdateBtn->setObjectName(QString::fromUtf8("rootfsUpdateBtn"));
 
         horizontalLayout->addWidget(rootfsUpdateBtn);
 
-        userdataUpdateBtn = new QPushButton(layoutWidget1);
+        userdataUpdateBtn = new QPushButton(layoutWidget2);
         userdataUpdateBtn->setObjectName(QString::fromUtf8("userdataUpdateBtn"));
 
         horizontalLayout->addWidget(userdataUpdateBtn);
 
-        layoutWidget2 = new QWidget(tab_2);
-        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(10, 130, 571, 41));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget2);
+        layoutWidget3 = new QWidget(tab_2);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(10, 130, 571, 41));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        label_4 = new QLabel(layoutWidget2);
+        label_4 = new QLabel(layoutWidget3);
         label_4->setObjectName(QString::fromUtf8("label_4"));
 
         horizontalLayout_3->addWidget(label_4);
 
-        hwVersionLabel = new QLabel(layoutWidget2);
+        hwVersionLabel = new QLabel(layoutWidget3);
         hwVersionLabel->setObjectName(QString::fromUtf8("hwVersionLabel"));
 
         horizontalLayout_3->addWidget(hwVersionLabel);
 
-        label_5 = new QLabel(layoutWidget2);
+        label_5 = new QLabel(layoutWidget3);
         label_5->setObjectName(QString::fromUtf8("label_5"));
 
         horizontalLayout_3->addWidget(label_5);
 
-        swVersionLabel = new QLabel(layoutWidget2);
+        swVersionLabel = new QLabel(layoutWidget3);
         swVersionLabel->setObjectName(QString::fromUtf8("swVersionLabel"));
 
         horizontalLayout_3->addWidget(swVersionLabel);
 
-        widget1 = new QWidget(tab_2);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(10, 20, 668, 33));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget4 = new QWidget(tab_2);
+        layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
+        layoutWidget4->setGeometry(QRect(10, 20, 668, 33));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget4);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        systemInfoBtn = new QPushButton(widget1);
+        systemInfoBtn = new QPushButton(layoutWidget4);
         systemInfoBtn->setObjectName(QString::fromUtf8("systemInfoBtn"));
         systemInfoBtn->setMaximumSize(QSize(71, 27));
 
         horizontalLayout_2->addWidget(systemInfoBtn);
 
-        label_7 = new QLabel(widget1);
+        label_7 = new QLabel(layoutWidget4);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setMaximumSize(QSize(66, 21));
 
         horizontalLayout_2->addWidget(label_7);
 
-        CPUfreqTB = new QTextBrowser(widget1);
+        CPUfreqTB = new QTextBrowser(layoutWidget4);
         CPUfreqTB->setObjectName(QString::fromUtf8("CPUfreqTB"));
         CPUfreqTB->setMaximumSize(QSize(115, 31));
 
         horizontalLayout_2->addWidget(CPUfreqTB);
 
-        label_8 = new QLabel(widget1);
+        label_8 = new QLabel(layoutWidget4);
         label_8->setObjectName(QString::fromUtf8("label_8"));
 
         horizontalLayout_2->addWidget(label_8);
 
-        memspaceTB = new QTextBrowser(widget1);
+        memspaceTB = new QTextBrowser(layoutWidget4);
         memspaceTB->setObjectName(QString::fromUtf8("memspaceTB"));
         memspaceTB->setEnabled(false);
         memspaceTB->setMaximumSize(QSize(115, 31));
 
         horizontalLayout_2->addWidget(memspaceTB);
 
-        label_9 = new QLabel(widget1);
+        label_9 = new QLabel(layoutWidget4);
         label_9->setObjectName(QString::fromUtf8("label_9"));
 
         horizontalLayout_2->addWidget(label_9);
 
-        diskspaceTB = new QTextBrowser(widget1);
+        diskspaceTB = new QTextBrowser(layoutWidget4);
         diskspaceTB->setObjectName(QString::fromUtf8("diskspaceTB"));
         diskspaceTB->setMaximumSize(QSize(115, 31));
 
@@ -271,7 +271,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

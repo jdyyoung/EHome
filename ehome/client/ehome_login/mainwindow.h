@@ -28,6 +28,10 @@ private slots:
 
     void on_kernelUpdateBtn_clicked();
 
+    void on_LEDonBtn_clicked();
+
+    void on_LEDoffBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

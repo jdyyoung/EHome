@@ -117,8 +117,29 @@ int zigbee_set_mac()
 
 int zigbee_led_on()
 {
-    LOG("zigbee led on.\n");
+    LOG("zigbee led on\n");
+    unsigned char cmd[6],rbuf[7];
+    //led_on cmd;
+    cmd[0] = 0xFC;
+    cmd[1] = 0x05;
+    cmd[2] = 0xa1;
+    cmd[3] = 0x03;
+    cmd[4] = 0x01;//将灯的状态设置为0或者1
+    cmd[5] = 0x5a;
 
+    //zigbee发送点灯命令
+    if(serial_write(zigbee_fd,(char*)cmd,6)!=6)
+    {    
+        ERR("write zigbee cmd:led on!\n");
+        return ERROR;
+    }
+
+   //zigbee接收返回指令 
+   if(serial_read(zigbee_fd,(char*)rbuf,7)==-1)
+   {
+        return ERROR;
+   }
+/*
     int i;
     unsigned char cmd[100] = {0};
     cmd[0] = 0xFC;
@@ -153,6 +174,7 @@ int zigbee_led_on()
         printf("%x ",buf[i]);
     }
     printf("\n");
+*/
 
     return SUCCESS;
 }
@@ -160,6 +182,28 @@ int zigbee_led_on()
 int zigbee_led_off()
 {
     LOG("zigbee led off.\n");
+    unsigned char cmd[6],rbuf[7];
+    //led_off cmd;
+    cmd[0] = 0xFC;
+    cmd[1] = 0x05;
+    cmd[2] = 0xa1;
+    cmd[3] = 0x03;
+    cmd[4] = 0x00;//将灯的状态设置为0或者1
+    cmd[5] = 0x5b;
+
+    //zigbee发送关灯命令
+    if(serial_write(zigbee_fd,(char*)cmd,6)!=6)
+    {    
+        ERR("write zigbee cmd:led off!\n");
+        return ERROR;
+    }
+
+   //zigbee接收返回指令 
+   if(serial_read(zigbee_fd,(char*)rbuf,7)==-1)
+   {
+        return ERROR;
+   }
+    /*
     int i;
     unsigned char cmd[100] = {};
     cmd[0] = 0xFC;
@@ -199,6 +243,8 @@ int zigbee_led_off()
         return SUCCESS;
     }
     return ERROR;
+    */
+   return SUCCESS;
 }
 
 /*获取温度*/

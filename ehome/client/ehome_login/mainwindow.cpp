@@ -138,3 +138,39 @@ void MainWindow::on_kernelUpdateBtn_clicked()
         }
     }
 }
+
+void MainWindow::on_LEDonBtn_clicked()
+{
+    int ret;
+    int cmd = ZIGBEE_LED_ON;
+    ret=udp_init(CLIENT,ip_addr,8888);
+    if(ret == -1)
+    {
+        qDebug("init socket error!");
+    }
+    //
+    ret=udp_write(CLIENT,(char *)&cmd,sizeof(int));
+    if(ret==-1)
+    {
+        qDebug("udp_write failed");
+        return;
+    }
+}
+
+void MainWindow::on_LEDoffBtn_clicked()
+{
+    int ret;
+    int cmd = ZIGBEE_LED_OFF;
+    ret=udp_init(CLIENT,ip_addr,8888);
+    if(ret == -1)
+    {
+        qDebug("init socket error!");
+    }
+    //
+    ret=udp_write(CLIENT,(char *)&cmd,sizeof(int));
+    if(ret==-1)
+    {
+        qDebug("udp_write failed");
+        return;
+    }
+}

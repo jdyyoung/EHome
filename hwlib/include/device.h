@@ -13,7 +13,10 @@ extern int zigbee_set_mac(void);
 extern int zigbee_led_on(void);
 extern int zigbee_led_off(void);
 extern int get_hardware_infomation(void);
-extern int update(void);
+extern int get_temperature(void);
+extern int kernel_update(void);
+extern int rootfs_update(void);
+extern int userdata_update(void);
 
 extern int zigbee_fd;
 extern char macs[8];
