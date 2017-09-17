@@ -1,4 +1,4 @@
-# makefile for kernel module
+#makefile for kernel module
 
 MODNAME = ds18b20_drv
 CROSS_COMPILE = arm-linux-

@@ -103,11 +103,11 @@
 #define MACH_TYPE_SMDKV210 2456
 
 //2017-08-20jdy
-static struct i2c_board_info at24c02[]={
-    {
-        I2C_BOARD_INFO("at24c02",0x50)
-    }
-};
+//static struct i2c_board_info at24c02[] __initdata ={
+  //  {
+    //    I2C_BOARD_INFO("at24c02",0x50)
+    //}
+//};
 
 static struct egalax_i2c_platform_data  egalax_platdata  = {
 	.gpio_int = EGALAX_IRQ,
@@ -1955,7 +1955,7 @@ static struct wm8960_data wm8960_pdata = {
 };
 #endif
 static struct i2c_board_info tq210_i2c_devs0[] __initdata = {
-	{ I2C_BOARD_INFO("24c08", 0x50), },     /* Samsung S524AD0XD1 */
+	//{ I2C_BOARD_INFO("24c08", 0x50), },     /* Samsung S524AD0XD1 */
 	{ I2C_BOARD_INFO("wm8580", 0x1b), },
 #ifdef CONFIG_SND_SOC_WM8960_TQ210
 	{
@@ -2214,8 +2214,16 @@ static void tq210_pm_restart(char mode, const char *cmd)
 {
 	usb_host_phy_off();
 	arm_machine_restart(mode, cmd);
-
 }
+
+
+    //2017-08-20jdy
+    static struct i2c_board_info at24c02[] __initdata ={
+            {
+                I2C_BOARD_INFO("at24c02",0x50),
+            },
+    };
+
 static void __init tq210_machine_init(void)
 {
 
@@ -2248,12 +2256,14 @@ static void __init tq210_machine_init(void)
 	s3c_i2c1_set_platdata(NULL);
 	s3c_i2c2_set_platdata(NULL);
 
-    //2017-08-20jdy
-	i2c_register_board_info(0, at24c02, ARRAY_SIZE(at24c02));
 
 	i2c_register_board_info(0, tq210_i2c_devs0, ARRAY_SIZE(tq210_i2c_devs0));
 	i2c_register_board_info(1, tq210_i2c_devs1, ARRAY_SIZE(tq210_i2c_devs1));
 	i2c_register_board_info(2, tq210_i2c_devs2, ARRAY_SIZE(tq210_i2c_devs2));
+
+    //
+	i2c_register_board_info(0, at24c02, ARRAY_SIZE(at24c02));
+
 #ifdef CONFIG_TOUCHSCREEN_EGALAX
 	i2c_register_board_info(5, i2c_devs5, ARRAY_SIZE(i2c_devs5));
 #endif
