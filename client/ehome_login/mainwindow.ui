@@ -17,14 +17,14 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>50</y>
-      <width>681</width>
-      <height>444</height>
+      <x>0</x>
+      <y>0</y>
+      <width>721</width>
+      <height>481</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -34,9 +34,9 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>90</y>
-        <width>590</width>
-        <height>3</height>
+        <y>80</y>
+        <width>671</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="orientation">
@@ -141,7 +141,7 @@
        <rect>
         <x>10</x>
         <y>60</y>
-        <width>651</width>
+        <width>671</width>
         <height>16</height>
        </rect>
       </property>
@@ -153,9 +153,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>120</y>
-        <width>650</width>
-        <height>3</height>
+        <y>110</y>
+        <width>671</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="orientation">

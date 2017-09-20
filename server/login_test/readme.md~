@@ -1,0 +1,14 @@
+鏂囦欢澶逛笅锛屼负浜嗘祴璇曠櫥褰曠晫闈紝鍦ㄧ敓鎴愪竴涓枃浠讹紝瀛樻斁鍔犲瘑杩囩殑鏂囦欢
+
+
+文件夹login_test里的文件是为PC端登录界面测试用的。
+crt_user_info.c源文件为创建一个的测试账户信息的验证文件passwd，保存路径为：/opt/rootfs/home/ehome/etc/passwd；此文件包含登录帐号名，密码，AES-128加密算法的密钥，密码加密后密文
+
+login_varify_test.c文件为模拟登录，测试用的源文件
+
+makefile:编译crt_user_info.c与login_varify_test.c生成对应可执行文件
+
+login_test.sh：最终的运行脚本，在该文件夹目录下运行该脚本就可完成测试
+
+
+

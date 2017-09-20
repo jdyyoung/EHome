@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Mon Sep 11 22:41:15 2017
+** Created: Wed Sep 20 20:44:41 2017
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -85,12 +85,12 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(30, 50, 681, 444));
+        tabWidget->setGeometry(QRect(0, 0, 721, 481));
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         line_3 = new QFrame(tab);
         line_3->setObjectName(QString::fromUtf8("line_3"));
-        line_3->setGeometry(QRect(30, 90, 590, 3));
+        line_3->setGeometry(QRect(30, 80, 671, 16));
         line_3->setFrameShape(QFrame::HLine);
         line_3->setFrameShadow(QFrame::Sunken);
         layoutWidget = new QWidget(tab);
@@ -148,12 +148,12 @@ public:
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
         line = new QFrame(tab_2);
         line->setObjectName(QString::fromUtf8("line"));
-        line->setGeometry(QRect(10, 60, 651, 16));
+        line->setGeometry(QRect(10, 60, 671, 16));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
         line_2 = new QFrame(tab_2);
         line_2->setObjectName(QString::fromUtf8("line_2"));
-        line_2->setGeometry(QRect(10, 120, 650, 3));
+        line_2->setGeometry(QRect(10, 110, 671, 16));
         line_2->setFrameShape(QFrame::HLine);
         line_2->setFrameShadow(QFrame::Sunken);
         layoutWidget2 = new QWidget(tab_2);
