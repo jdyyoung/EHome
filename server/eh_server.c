@@ -21,11 +21,12 @@ int main()
     int ret=device_init();
     if(ret == ERROR)
     {
-        ERR("device_init\n");
+        ERR("device_init fail!\n");
+        return 0;
     }
     else
     {
-        LOG("init success\n");
+        LOG("device_init success!\n");
     }
     recvcmd();
     return 0;
@@ -43,8 +44,6 @@ void recvcmd(void)
         }
         pr_debug("read cmd success\n");
         pr_debug("cmd=%d\n",cmd);
-        ret=GET_HARDWARE_INFO;
-        pr_debug("GET_HARDWARE_INFO=%d\n",ret);
         switch(cmd)
         {
             case LOGIN_EHOME:
@@ -60,51 +59,50 @@ void recvcmd(void)
                 ret=zigbee_led_on();
                 if(ret == ERROR)
                 {
-                    pr_debug("set zigbee led on failed!\n");
+                    ERR("set zigbee led on failed!\n");
                 }
                 break;
 
             case ZIGBEE_LED_OFF:
-                pr_debug("test!\n");
                 ret = zigbee_led_off();
                 if(ret == ERROR)
                 {
-                    pr_debug("set zigbee led off failed!\n");
+                    ERR("set zigbee led off failed!\n");
                 }
                 break;
             case GET_TEMPERATURE:
                 ret =get_temperature();
                 if(ret == ERROR)
                 {
-                    pr_debug("get tempature faild!\n");
+                    ERR("get tempature faild!\n");
                 }
                 break;
            case GET_HARDWARE_INFO:
                 ret=get_hardware_infomation();
                 if(ret == ERROR)
                 {
-                    pr_debug("get hardware infomation failed!\n");
+                    ERR("get hardware infomation failed!\n");
                 }
                 break;
             case KERNEL_UPDATE:
                 ret=kernel_update();
                 if(ret == ERROR)
                 {
-                    pr_debug("kernel_update failed!\n");
+                    ERR("kernel_update failed!\n");
                 }
                 break;
             case USERDATA_UPDATE:
                 ret=rootfs_update();
                 if(ret == ERROR)
                 {
-                    pr_debug("rootfs_update failed!\n");
+                    ERR("rootfs_update failed!\n");
                 }
                 break;
             case ROOTFS_UPDATE:
                 ret=userdata_update();
                 if(ret == ERROR)
                 {
-                    pr_debug("userdata_update failed!\n");
+                    ERR("userdata_update failed!\n");
                 }
                 break;
             default:
@@ -159,7 +157,7 @@ void login_verify()
     if(strcmp(nm,info.user))
     {
         close(fd);
-        pr_debug("wrong username \n");
+        pr_debug("wrong username! \n");
         return;
     }
 

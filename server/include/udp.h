@@ -17,7 +17,7 @@ extern "C" {
 #include<stdlib.h>
 
 /*调试宏*/
-//#define DEBUG
+#define DEBUG
 #ifdef DEBUG
 #define pr_debug(fmt,...) printf(fmt,##__VARGS__)
 #else

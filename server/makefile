@@ -7,6 +7,8 @@ SOURCE=*.c
 
 $(BIN):$(SOURCE)
 	$(CC) $(CFLAGS) $(SOURCE) $(LIBS) $(LDFLAGS) -o $(BIN)
+	cp $(BIN) /opt/rootfs/home/
 
+.PHONY :clean
 clean:
 	rm -rf $(BIN)

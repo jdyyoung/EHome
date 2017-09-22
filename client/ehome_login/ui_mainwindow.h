@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Sep 20 20:44:41 2017
+** Created: Fri Sep 22 22:26:44 2017
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -279,7 +279,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "EHOME\344\270\273\347\225\214\351\235\242", 0, QApplication::UnicodeUTF8));
         action123->setText(QApplication::translate("MainWindow", "123", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindow", "\345\256\242\345\216\205\347\201\257\357\274\232", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MainWindow", "\345\205\263\351\227\255", 0, QApplication::UnicodeUTF8));

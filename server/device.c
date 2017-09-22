@@ -22,6 +22,7 @@ int device_init()
     int ret = udp_init(SERVER,IP,PORT);
     if(ret == -1)
     {
+        ERR("udp_init error!\n");
         return ERROR;
     }
 
@@ -201,7 +202,8 @@ int zigbee_led_off()
    //zigbee接收返回指令 
    if(serial_read(zigbee_fd,(char*)rbuf,7)==-1)
    {
-        return ERROR;
+       ERR("serial_read zigbee ruturned cmd fail!\n");
+       return ERROR;
    }
     /*
     int i;
@@ -255,10 +257,12 @@ int get_temperature(void)
     fd = ds18b20_open();
     if (fd < 0) 
     {
+        ERR("ds18b20_open fail!\n");
         return ERROR;
     }
     if (ds18b20_read(fd, &ds18b20ctrl) == -1)
     {
+        ERR("ds18b20_read fail!\n");
         return ERROR;
     }
     ds18b20_close(fd);
