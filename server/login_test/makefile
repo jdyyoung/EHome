@@ -1,6 +1,6 @@
 #1.交叉编译器
-CC=arm-linux-gcc
-#CC=gcc
+#CC=arm-linux-gcc
+CC=gcc
 
 #2.最终生成的可执行文件
 BIN1=user_info

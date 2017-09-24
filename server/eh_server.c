@@ -11,13 +11,14 @@
 
 #define _XOPEN_SOURCE
 
-extern void recvcmd(void);
-extern void login_verify(void);
+void recvcmd(void);
+void login_verify(void);
 
 #define PASSWD_FILE "/home/ehome/etc/passwd"
 
 int main()
 {
+
     int ret=device_init();
     if(ret == ERROR)
     {
@@ -28,6 +29,10 @@ int main()
     {
         LOG("device_init success!\n");
     }
+    //初始化成功，led指示灯亮
+//    system("/home/apptest/ledlib_test on 1");
+
+    //接收命令，执行命令相关操作
     recvcmd();
     return 0;
 }

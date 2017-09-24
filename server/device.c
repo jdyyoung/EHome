@@ -29,6 +29,7 @@ int device_init()
     zigbee_fd = serial_open();
     if(zigbee_fd == -1)
     {
+        ERR("serial_open fail!\n");
         return ERROR;
     }
 
@@ -41,6 +42,7 @@ int device_init()
     ret = serial_config(zigbee_fd,&serialctrl);
     if(ret == -1)
     {
+        ERR("serial_config fail!\n");
         return ERROR;
     }
     return SUCCESS;

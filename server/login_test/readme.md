@@ -5,6 +5,6 @@ login_varify_test.c源文件为模拟登录，测试验证文件passwd的有效性。
 
 makefile:编译crt_user_info.c与login_varify_test.c生成对应可执行文件
 
-login_test.sh：最终的运行脚本，在该文件夹目录下运行该脚本就可完成测试,当终端打印“LOGIN_SUCCESS!”表明验证文件passwd有效，否则无效。
+login_test.sh：脚本在PC端测试，最终的运行脚本，在该文件夹目录下运行该脚本就可完成测试,当终端打印“LOGIN_SUCCESS!”表明验证文件passwd有效，否则无效。
 
 

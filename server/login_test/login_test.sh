@@ -4,7 +4,6 @@
 #执行make clean
 #执行make c，生成创建/opt/rootfs/home/ehome/etc/passwd文件的可执行文件
 testfile=/opt/rootfs/home/ehome/etc/passwd
-a="make clean"
 if [ -f "$testfile" ];then
     rm $testfile
 fi
