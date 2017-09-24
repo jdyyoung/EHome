@@ -38,7 +38,7 @@ echo "led on"
 /home/apptest/ledlib_test on 1
 
 #服务器停止指示灯灭
-./server_rs&
+/home/server_rs&
 
 
 

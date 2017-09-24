@@ -8,7 +8,7 @@ int main(void)
     //int res = system("cal");
     while(1)
     {
-        int res = system("./shell.sh");
+        int res = system("/home/shell.sh");
         if(-1 == res)
         {
             perror("system"),exit(-1);

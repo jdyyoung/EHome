@@ -1,0 +1,174 @@
+.
+├── client
+│   ├── ehome_login
+│   ├── ehome_login.pro
+│   ├── ehome_login.pro.user
+│   ├── ehome_login.pro.user.1.3
+│   ├── global.h
+│   ├── libudp.so
+│   ├── log.h
+│   ├── LoginDlg.cpp
+│   ├── LoginDlg.h
+│   ├── LoginDlg.o
+│   ├── LoginDlg.ui
+│   ├── main.cpp
+│   ├── main.o
+│   ├── mainwindow.cpp
+│   ├── mainwindow.h
+│   ├── mainwindow.o
+│   ├── mainwindow.ui
+│   ├── Makefile
+│   ├── moc_LoginDlg.cpp
+│   ├── moc_LoginDlg.o
+│   ├── moc_mainwindow.cpp
+│   ├── moc_mainwindow.o
+│   ├── msg.h
+│   ├── udp.h
+│   ├── udp_test.c
+│   ├── ui_LoginDlg.h
+│   └── ui_mainwindow.h
+├── drivers
+│   ├── ds18b20
+│   │   ├── ds18b20_drv.c
+│   │   ├── ds18b20_test.c
+│   │   └── Makefile
+│   ├── eeprom
+│   │   ├── at24c02_drv.c
+│   │   ├── at24c02_test.c
+│   │   ├── mach-tq210.c
+│   │   └── Makefile
+│   └── led
+│       ├── led_drv.c
+│       ├── led_drv.c.bak1
+│       └── Makefile
+├── ehome_pc_win
+│   ├── dnw0.6C.exe
+│   ├── SecureCRT_CN.rar
+│   ├── u-boot镜像
+│   │   ├── readme.txt
+│   │   └── uboot_TQ210_1.3.4_V1.7.bin
+│   ├── USB转串口驱动.rar
+│   ├── x210_usb.bin
+│   ├── x210 usb Driver.rar
+│   └── zigbee
+│       ├── 串口点灯.rar
+│       └── 第二章 开发环境和软件的安装.pdf
+├── ehome_readme.md
+├── ehome_readme.md~
+├── file_trre.txt
+├── hwlib
+│   ├── ds18b20
+│   │   ├── ds18b20.c
+│   │   ├── ds18b20.h
+│   │   ├── ds18b20lib_test.c
+│   │   └── Makefile
+│   ├── eeprom
+│   │   ├── eeprom.c
+│   │   ├── eeprom.h
+│   │   ├── eepromlib_test.c
+│   │   └── Makefile
+│   ├── led
+│   │   ├── led.c
+│   │   ├── led.h
+│   │   ├── ledlib_test.c
+│   │   └── Makefile
+│   ├── readme.md
+│   ├── readme.md~
+│   ├── serial
+│   │   ├── Makefile
+│   │   ├── Makefile_pre
+│   │   ├── Makefile_zigbee
+│   │   ├── serial.c
+│   │   ├── serial.h
+│   │   ├── seriallib_test_read.c
+│   │   ├── seriallib_test_write.c
+│   │   └── seriallib_test_zigbee.c
+│   ├── udp
+│   │   ├── Makefile
+│   │   ├── readme.txt
+│   │   ├── udp.c
+│   │   ├── udp.h
+│   │   ├── udplib_client
+│   │   ├── udplib_client.c
+│   │   └── udplib_test.c
+│   └── update
+│       ├── Makefile
+│       ├── update.c
+│       ├── update.h
+│       └── updatelib_test.c
+├── img
+│   ├── logo1.bin
+│   ├── mach-tq210.c
+│   ├── readme.md
+│   ├── rootfs.img
+│   ├── rootfs.zip
+│   ├── u-boot.bin
+│   ├── userdata.img
+│   ├── userdata.zip
+│   └── zImage
+├── server
+│   ├── device.c
+│   ├── ehome_run.sh
+│   ├── eh_server
+│   ├── eh_server.c
+│   ├── include
+│   │   ├── device.h
+│   │   ├── ds18b20.h
+│   │   ├── eeprom.h
+│   │   ├── log.h
+│   │   ├── msg.h
+│   │   ├── serial.h
+│   │   ├── udp.h
+│   │   └── update.h
+│   ├── lib
+│   │   ├── libds18b20.so
+│   │   ├── libeeprom.so
+│   │   ├── libserial.so
+│   │   ├── libudp.so
+│   │   └── libupdate.so
+│   ├── login_test
+│   │   ├── crt_user_info.c
+│   │   ├── login_test.sh
+│   │   ├── login_varify_test
+│   │   ├── login_varify_test.c
+│   │   ├── makefile
+│   │   ├── readme.md
+│   │   ├── readme.md~
+│   │   └── user_info
+│   ├── makefile
+│   ├── readme.md
+│   ├── server_rs
+│   ├── server_rs.c
+│   ├── shell.sh
+│   └── usb
+│       ├── mdev.conf
+│       ├── readme.txt
+│       ├── usb_insert.sh
+│       └── usb_remove.sh
+├── tools
+│   ├── 4.4.6_TQ210_release_20120720.tar.bz2
+│   ├── busybox-1.20.0_for_TQ210_V1.0.tar.bz2
+│   ├── Kernel_3.0.8_TQ210_for_Linux_v2.2.tar.bz2
+│   ├── mkyaffs2image
+│   ├── mtd-utils-mtd-utils.tar.bz2
+│   ├── nfs
+│   │   ├── nfs-common_1%3a1.2.5-3ubuntu3_i386.deb
+│   │   └── nfs-kernel-server_1%3a1.2.5-3ubuntu3_i386.deb
+│   ├── readme.md
+│   ├── readme.md~
+│   └── tftp
+│       ├── openbsd-inetd_0.20091229-1ubuntu1_i386.deb
+│       ├── test.txt
+│       ├── tftpd-hpa_5.2-1ubuntu1_i386.deb
+│       ├── tftp-hpa_5.2-1ubuntu1_i386.deb
+│       └── xinetd_1%3a2.3.14-7ubuntu4_i386.deb
+└── ui_screenshot
+    ├── ehome00.JPG
+    ├── ehome01.JPG
+    ├── ehome02.JPG
+    ├── ehome03.JPG
+    ├── ehome04.JPG
+    ├── ehome05.JPG
+    └── ehome06.JPG
+
+25 directories, 146 files
