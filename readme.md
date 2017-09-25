@@ -1,5 +1,3 @@
-**前话：**非常感谢您关注到小弟的项目，所谓当局者迷，还是第一次独立完成的小项目。有幸您被查阅，错误、不完善之处定当难免，请多多指教，亦可互相学习。
-
 这是一个智能家居的项目，它是一个比较系统比较完整的学习项目，重点学习复习嵌入式Linux相关知识，项目综合利用了C语言、C++、zigbee、Qt、shell脚本、makefile、Linux驱动开发、Linux系统编程等嵌入式技术，实现了智能家居的雏形，它以Cortex-A8开发板作为整个系统的核心模块，控制整个系统的运行。
 
 ### **主要功能为：**
@@ -64,17 +62,19 @@ ZigBee资料的百度云链接：链接：http://pan.baidu.com/s/1nv9POnB 密码
 
 **客户端界面截图：**
 
+![ehome00.JPG](https://github.com/jdyyoung/EHome/blob/master/ui_screenshot/ehome00.JPG?raw=true)
 
+![ehome01.JPG](https://github.com/jdyyoung/EHome/blob/master/ui_screenshot/ehome01.JPG?raw=true)
 
+![ehome02.JPG](https://github.com/jdyyoung/EHome/blob/master/ui_screenshot/ehome02.JPG?raw=true)
 
+![ehome03.JPG](https://github.com/jdyyoung/EHome/blob/master/ui_screenshot/ehome03.JPG?raw=true)
 
+![ehome04.JPG](https://github.com/jdyyoung/EHome/blob/master/ui_screenshot/ehome04.JPG?raw=true)
 
+![ehome05.JPG](https://github.com/jdyyoung/EHome/blob/master/ui_screenshot/ehome05.JPG?raw=true)
 
-
-
-
-
-
+![ehome06.JPG](https://github.com/jdyyoung/EHome/blob/master/ui_screenshot/ehome06.JPG?raw=true)
 
 
 
