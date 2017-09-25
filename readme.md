@@ -1,4 +1,4 @@
-这是一个智能家居的项目，它是一个比较系统比较完整的学习项目，重点学习复习嵌入式Linux相关知识，项目综合利用了C语言、C++、zigbee、Qt、shell脚本、makefile、Linux驱动开发、Linux系统编程等嵌入式技术，实现了智能家居的雏形，它以Cortex-A8开发板作为整个系统的核心模块，控制整个系统的运行。
+这是一个智能家居的项目，项目综合利用了C语言、C++、zigbee、Qt、shell脚本、makefile、Linux驱动开发、Linux系统编程等嵌入式技术，实现了智能家居的雏形，项目以Cortex-A8开发板作为整个系统的核心模块，控制整个系统的运行。
 
 ### **主要功能为：**
 
@@ -46,19 +46,13 @@
 
 ​	**client文件夹**：创建PC客户端的Qt源码，及界面所需动态库，头文件等可参考具体文件下readme.md的介绍
 
-​	**tools文件夹**：存放着各种源码压缩包及软件，将会被裁剪、交叉编译、移植到开发板上，可阅读具体文件下readme.md
+​	**tools文件夹**：存放着各种源码压缩包及软件，将会被裁剪、交叉编译、移植到开发板上，可阅读具体文件下readme.md;（文件有点大百度云盘下载）
 
-​	**ehome_pc_win文件夹**:存放着项目在win系统的pc端用到的工具软件，驱动等，uboot的镜像放在此文件夹下，可阅读具体文件下readme.md
+​	**ehome_pc_win文件夹**:存放着项目在win系统的pc端用到的工具软件，驱动等，uboot的镜像放在此文件夹下，可阅读具体文件下readme.md；（文件有点大百度云盘下载）
 
 ​	**img文件夹**：调试时的zImage、rootfs压缩包、用户数据软件压缩包；内核修改后的平台源码，最后部署的镜像文件等
 
 ​	**file_tree.txt文件**: 项目的树状目录
-
-***资源：***
-
-虚拟机VMware，Ubuntu12.04 百度云链接：链接：http://pan.baidu.com/s/1bp94kMj 密码：0jdv
-
-ZigBee资料的百度云链接：链接：http://pan.baidu.com/s/1nv9POnB 密码：ge1c
 
 **客户端界面截图：**
 
@@ -78,7 +72,15 @@ ZigBee资料的百度云链接：链接：http://pan.baidu.com/s/1nv9POnB 密码
 
 
 
+***资源：***
 
+ehome_pc_win百度云链接：链接：http://pan.baidu.com/s/1dE5M1KP 密码：k1sy
+
+tools百度云链接：链接：http://pan.baidu.com/s/1kUNRg71 密码：gq4e
+
+虚拟机VMware，Ubuntu12.04 百度云链接：链接：http://pan.baidu.com/s/1bp94kMj 密码：0jdv
+
+ZigBee资料的百度云链接：链接：http://pan.baidu.com/s/1nv9POnB 密码：ge1c
 
 
 
